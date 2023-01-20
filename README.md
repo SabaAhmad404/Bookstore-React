@@ -5,7 +5,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Todo List Project](#-Math-magician-React)
+- [📖 Todo List Project](#-Bookstore-React)
   - [🛠 Built With ](#-built-with-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
@@ -18,13 +18,14 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math-magician<a name="about-project"></a>
+# 📖 Bookstore-React<a name="about-project"></a>
 
-**Math-magician-React Project**
-"Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
+**Bookstore-React Project**
+The Bookstore is a website  that allows you to:
 
-- Make simple calculations.
-- Read a random math-related quote.
+- Display a list of books.
+- Add a book.
+- Remove a selected book.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -48,7 +49,7 @@ coming soon
 
 - On the terminal run this command git clone ``
 
-- Go to the repository folder using command prompt cd `Math-magician-React`
+- Go to the repository folder using command prompt cd `Bookstore-React`
 
 - Install the dev dependencies for linters run npm install.
 - setup Webpack
@@ -73,9 +74,9 @@ Clone this repository to your desired folder:
 
 - Open the command prompt in the created directory.
 
-- On the terminal run this command git clone https://github.com/SabaAhmad404/Math-magician-React
+- On the terminal run this command git clone https://github.com/SabaAhmad404/Bookstore-React
 
-- Go to the repository folder using command prompt cd awesome-books-project
+- Go to the repository folder using command prompt cd Bookstore-React
 
 - Install the dev dependencies for linters run npm install.
 
@@ -103,7 +104,7 @@ Saba Ahmad
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/SabaAhmad404/Math-magician-React/issues).
+Feel free to check the [issues page](https://github.com/SabaAhmad404/Bookstore-React/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
