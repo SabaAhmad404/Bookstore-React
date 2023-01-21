@@ -38,7 +38,7 @@ The Bookstore is a website  that allows you to:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-coming soon
+-[live](https://book-store-webapp.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
