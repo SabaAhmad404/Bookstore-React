@@ -34,3 +34,12 @@ h1 {
   background-color: aqua;
   color: orange;
 }
+.add-book{
+  background-color: black;
+  color: bisque;
+  transition: color 1.5s ease;
+}
+.add-book:hover{
+  color: orange;
+}
+
