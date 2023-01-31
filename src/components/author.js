@@ -3,18 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Title(props) {
-  const {
-    title, author, genres, progres, chapter,
-  } = props;
+  const { title, author } = props;
   return (
     <div>
-      <p>{genres}</p>
       <h1>{title}</h1>
       <p>{author}</p>
-      <div className="progress">
-        <p>{progres}</p>
-        <p>{chapter}</p>
-      </div>
     </div>
   );
 }
