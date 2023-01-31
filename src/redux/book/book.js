@@ -21,7 +21,7 @@ export default function bookReducer(state = initialState, action) {
     case REMOVE_BOOK:
       return {
         state,
-        Books: [state.Books, action.text],
+        Books: state.Books.filter((B) => B !== action.text),
       };
     default:
       return state;
