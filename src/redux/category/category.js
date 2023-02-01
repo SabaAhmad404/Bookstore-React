@@ -1,22 +1,17 @@
-const CHECK_STATUS = 'redux/category/CHECK_STATUS';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  category: [],
+  message: 'under-construction',
 };
-
-export const checkStatus = (status) => ({
-  type: CHECK_STATUS,
-  text: status,
+const gory = createSlice({
+  name: 'category',
+  initialState,
+  reducers: {
+    checkStatus: (state) => ({
+      ...state,
+      message: 'under-construction',
+    }),
+  },
 });
-
-export default function categoryReducer(state = initialState, action) {
-  switch (action.type) {
-    case CHECK_STATUS:
-      return {
-        state,
-        category: [state.category, 'under-construction'],
-      };
-    default:
-      return state;
-  }
-}
+export const { checkStatus } = gory.actions;
+export default gory.reducer;
