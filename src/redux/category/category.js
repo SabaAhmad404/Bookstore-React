@@ -1,16 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  message: 'under-construction',
-};
 const gory = createSlice({
-  name: 'category',
-  initialState,
+  name: "category",
+  initialState: [],
   reducers: {
-    checkStatus: (state) => ({
-      ...state,
-      message: 'under-construction',
-    }),
+    checkStatus: (state) => {
+      state.push("under-construction");
+    },
   },
 });
 export const { checkStatus } = gory.actions;
