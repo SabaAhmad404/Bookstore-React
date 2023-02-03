@@ -1,3 +1,4 @@
+
 <a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
@@ -5,7 +6,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Todo List Project](#-Math-magician-React)
+- [📖 Todo List Project](#-Bookstore-React)
   - [🛠 Built With ](#-built-with-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
@@ -22,6 +23,10 @@
 
 **Book-Store**
  Bookstore-React Project The Bookstore is a website that allows you to:
+# 📖 Bookstore-React<a name="about-project"></a>
+
+**Bookstore-React Project**
+The Bookstore is a website  that allows you to:
 
 - Display a list of books.
 - Add a book.
@@ -37,7 +42,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-coming soon
+-[live](https://book-store-webapp.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,7 +81,7 @@ Clone this repository to your desired folder:
 
 - On the terminal run this command git clone https://github.com/SabaAhmad404/Bookstore-React
 
-- Go to the repository folder using command prompt cd awesome-books-project
+- Go to the repository folder using command prompt cd Bookstore-React
 
 - Install the dev dependencies for linters run npm install.
 
