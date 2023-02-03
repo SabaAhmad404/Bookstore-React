@@ -8,21 +8,21 @@ function Store() {
   const bookData = useSelector((state) => state.Books);
 
   return (
-    <div>
-      <ul className="bar">
-        {bookData.Books.map((book) => (
-          <li className="container">
+    <section>
+      <div>
+        <ul>
+          {bookData?.Books.map((book) => (
             <Title
               title={book.title}
               id={book.id}
               author={book.author}
               key={book.id}
             />
-          </li>
-        ))}
-      </ul>
+          ))}
+        </ul>
+      </div>
       <Add />
-    </div>
+    </section>
   );
 }
 export { Store as default };

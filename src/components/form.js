@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
-
-import { useDispatch } from 'react-redux';
-import { Addbooks } from '../redux/book/book';
-import '../styles/app.css';
+import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import { useDispatch } from "react-redux";
+import { addBooks } from "../redux/book/book";
+import "../styles/app.css";
 
 function Add() {
-  const [title, settitle] = useState('');
-  const [author, setauthor] = useState('');
-  const id = Math.random().toString();
-
+  const [title, setTitle] = useState(" ");
+  const [author, setAuthor] = useState(" ");
   const dispatch = useDispatch();
-  const submit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(Addbooks({ title, author, id }));
+    const book = {
+      id: uuidv4(),
+      title,
+      author,
+    };
+    dispatch(addBooks(book));
+    setTitle(" ");
+    setAuthor(" ");
   };
 
   return (
-    <form className="form-bar">
+    <form className="form-bar" onSubmit={handleSubmit}>
       <h2>Add books</h2>
       <div className="title-bar">
         <input
           type="text"
           id="text"
           value={title}
-          onChange={(e) => settitle(e.target.value)}
+          onChange={(e) => setTitle(e.target.value)}
           placeholder="title-book"
         />
       </div>
@@ -33,10 +38,10 @@ function Add() {
           id="text-author"
           placeholder="Author-book"
           value={author}
-          onChange={(e) => setauthor(e.target.value)}
+          onChange={(e) => setAuthor(e.target.value)}
         />
       </div>
-      <button type="submit" className="add-book" onClick={submit}>
+      <button type="submit" className="add-book">
         Add Book
       </button>
     </form>
