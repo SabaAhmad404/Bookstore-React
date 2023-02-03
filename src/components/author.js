@@ -10,11 +10,10 @@ function Title({ title, author, id }) {
     dispatch(removeBooks(id));
   };
   return (
-    <span className="book-display">
+    <span className="book">
       <h1>{title}</h1>
-      <h2> by </h2>
-      <h1>{author}</h1>
-      <button type="button" onClick={remove}>
+      <p>{author}</p>
+      <button type="submit" onClick={remove}>
         Remove
       </button>
     </span>

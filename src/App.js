@@ -17,7 +17,7 @@ function App() {
           </li>
           <li>
             {' '}
-            <Link className="category" to="/Category">
+            <Link className="category" to="/Categories">
               Category
             </Link>
           </li>
@@ -26,7 +26,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<BookList />} />
-        <Route path="/Category" element={<Categories />} />
+        <Route path="/Categories" element={<Categories />} />
       </Routes>
     </>
   );
