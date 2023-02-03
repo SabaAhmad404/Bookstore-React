@@ -21,11 +21,11 @@
 # 📖 Book-Store<a name="about-project"></a>
 
 **Book-Store**
-Bookstore-React Project The Bookstore is a website that allows you to:
+ Bookstore-React Project The Bookstore is a website that allows you to:
 
--Display a list of books.
--Add a book.
--Remove a selected book.
+- Display a list of books.
+- Add a book.
+- Remove a selected book.
 
 ## 🛠 Built With <a name="built-with"></a>
 
