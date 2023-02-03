@@ -1,26 +1,27 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBooks } from '../redux/book/book';
+import { removeBooks } from '../redux/books/books';
 
-function Title(props) {
-  const { title, author, id } = props;
+function Title({ title, author, id }) {
   const dispatch = useDispatch();
-  const handleEvent = () => {
+
+  const remove = () => {
     dispatch(removeBooks(id));
   };
   return (
-    <div>
+    <span className="book-display">
       <h1>{title}</h1>
-      <p>{author}</p>
-      <button type="submit" onClick={handleEvent}>
+      <h2> by </h2>
+      <h1>{author}</h1>
+      <button type="button" onClick={remove}>
         Remove
       </button>
-    </div>
+    </span>
   );
 }
-export { Title as default };
+
+export default Title;
 Title.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
