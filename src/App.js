@@ -9,14 +9,14 @@ function App() {
     <>
       <nav className="nav-bar">
         <h1>Bookstore CMS</h1>
-        <ul className="links">
-          <li>
+        <ul className="nav-links">
+          <li className="link">
             {' '}
             <Link className="Books" to="/">
               Books
             </Link>
           </li>
-          <li>
+          <li className="linked">
             {' '}
             <Link className="category" to="/Categories">
               Category

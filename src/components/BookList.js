@@ -13,8 +13,8 @@ function BookList() {
   }, [dispatch]);
 
   return (
-    <div className="book-container">
-      <ul>
+    <div className="container">
+      <ul className="books">
         {books.map((book) => (
           <Title
             key={book.Id}
@@ -25,6 +25,7 @@ function BookList() {
           />
         ))}
       </ul>
+      <div className="create"> </div>
       <Create />
     </div>
   );
