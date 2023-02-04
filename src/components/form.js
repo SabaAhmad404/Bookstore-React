@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/app.css';
 
 function Add() {
   return (
@@ -10,7 +11,9 @@ function Add() {
       <div className="author-bar">
         <input type="text" id="text-author" placeholder="Author-book" />
       </div>
-      <button type="submit">Add Book</button>
+      <button type="submit" className="add-book">
+        Add Book
+      </button>
     </form>
   );
 }

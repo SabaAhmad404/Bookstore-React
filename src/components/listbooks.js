@@ -36,13 +36,7 @@ function Store() {
       <ul className="map-bar">
         {Books.map((book) => (
           <li className="container" key={book.id}>
-            <Title
-              title={book.title}
-              author={book.author}
-              genres={book.genres}
-              progres={book.progres}
-              chapter={book.chapter}
-            />
+            <Title title={book.title} author={book.author} />
             <button type="submit">Remove</button>
           </li>
         ))}
