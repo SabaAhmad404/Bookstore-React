@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBookAPI } from '../redux/fetch';
 
-function Title({ Title, Author, id }) {
+function Title({ Title, Author, Id }) {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
-    dispatch(removeBookAPI(id));
+    dispatch(removeBookAPI(Id));
   };
   return (
     <span className="title-container">
@@ -24,5 +24,5 @@ export default Title;
 Title.propTypes = {
   Title: PropTypes.string.isRequired,
   Author: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  Id: PropTypes.string.isRequired,
 };
