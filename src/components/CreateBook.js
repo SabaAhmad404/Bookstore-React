@@ -1,50 +1,56 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBooks } from '../redux/books/books';
-import '../styles/app.css';
+import { useDispatch } from 'react-redux';
+import { addBookAPI } from '../redux/fetch';
 
 function Create() {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [state, setState] = useState({
+    item_id: uuidv4(),
+    title: '',
+    author: '',
+    category: '',
+  });
+
+  const onChangeHandler = (event) => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value,
+      category: 'Category Action',
+    });
+  };
+
   const dispatch = useDispatch();
 
-  const submit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const bookContent = {
-      id: uuidv4(),
-      title,
-      author,
-    };
-    dispatch(addBooks(bookContent));
-    setTitle('');
-    setAuthor('');
+    dispatch(addBookAPI(state));
+    setState({
+      item_id: uuidv4(),
+      title: '',
+      author: '',
+      category: 'Category thriller',
+    });
   };
 
   return (
-    <form className="form-bar" onSubmit={submit}>
-      <h2>Add books</h2>
-      <div className="title-bar">
-        <input
-          type="text"
-          id="text"
-          placeholder="title-book"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </div>
-      <div className="author-bar">
-        <input
-          type="text"
-          id="text-author"
-          placeholder="Author-book"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-        />
-      </div>
-      <button type="submit" className="add-book">
-        Add Book
-      </button>
+    <form className="FORM" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        required
+        value={state.title}
+        onChange={onChangeHandler}
+      />
+      <input
+        type="text"
+        id="author"
+        name="author"
+        required
+        value={state.author}
+        onChange={onChangeHandler}
+      />
+      <button type="submit">Add Book</button>
     </form>
   );
 }

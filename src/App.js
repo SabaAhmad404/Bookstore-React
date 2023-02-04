@@ -2,6 +2,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import React from 'react';
 import BookList from './components/BookList';
 import Categories from './components/Categories';
+import './styles/app.css';
 
 function App() {
   return (
